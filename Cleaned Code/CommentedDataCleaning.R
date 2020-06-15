@@ -20,18 +20,18 @@ library(aws.s3) #tell R to use the aws.s3 package to let me connect with the dat
 # the data we are loading is a monthly download of foot traffic and demographic aggregations of where people go, where they came from, etc. 
 # This should be most useful for my suspicion. I think weekly data is overkill. 
 # Sys.setenv(
-#'AWS_ACCESS_KEY_ID' = 'AKIAWWZ7POZOGSC3KT64',
-#'AWS_SECRET_ACCESS_KEY' = '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',
+#'AWS_ACCESS_KEY_ID' = '',
+#'AWS_SECRET_ACCESS_KEY' = '',
 #"AWS_DEFAULT_REGION" = "us-west-2"
 #)
 
 #May 2020 and Beyond: 
-#s3://sg-c19-response/monthly-patterns/patterns/
+#REDACTED
 
 # The data we are loading is a monthly download of foot traffic and demographic aggregations of where people go, where they came from, etc. This should be most useful for my suspicion. I think weekly data is overkill. 
 #{r AWS data load, eval = FALSE}
 # data <- s3read_using(read.csv,
-#       object = "s3://sg-c19-response/monthly-patterns/patterns_backfill/2020/05/07/12.csv.gz")
+#       object = "REDACTED")
 
 
 
@@ -1051,7 +1051,7 @@ nchar(cbg$state_fips) %>% table
 nchar(cbg$county_fips) %>% table
 
 # update some codes
-# source: https://www.cdc.gov/nchs/nvss/bridged_race/county_geography-_changes2015.pdf
+# source: REDACTED
 cbg[state_fips == "02" & county_fips == "270", `:=`(county_fips = 158,
                                                     county = "Kusilvak Census Area")]
 cbg[state_fips == "46" & county_fips == "113", `:=`(county_fips = 102,
